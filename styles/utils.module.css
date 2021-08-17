@@ -81,7 +81,7 @@
 }
 
 .character {
-  background: url(http://nekopara.com/img/character/cho/pc/character_b.png) no-repeat;
+  background: url(/images/character_b.png) no-repeat;
 
   background-size: cover;
   background-position: 40% 0;
@@ -116,28 +116,3 @@
   }
 }
 
-.waves {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
-
-.wave1 {
-  height: 200px;
-  display: block !important;
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
-}
-
-.wave2 {
-  height: 100px;
-  padding-top: 30px;
-  display: block !important;
-  position: relative;
-}
-
-.particles {
-  background-color: #fff;
-  position: relative;
-}

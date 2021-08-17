@@ -20,8 +20,8 @@ const Waves = () => {
       >
         <defs>
           <linearGradient id="gradient1" gradientTransform="rotate(90)">
-            <stop offset="0%"  stopColor="#fff" stop-opacity="0" />
-            <stop offset="20%" stopColor="#fff" stop-opacity="1" />
+            <stop offset="0%"  stopColor="#fff" stopOpacity="0" />
+            <stop offset="20%" stopColor="#fff" stopOpacity="1" />
           </linearGradient>
         </defs>
       </Wave>

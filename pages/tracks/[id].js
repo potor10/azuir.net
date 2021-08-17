@@ -45,9 +45,17 @@ const Track = ({ trackData }) => {
         <title>{trackData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{trackData.title}</h1>
+        <h1>{trackData.title}</h1>
         <p>{JSON.stringify(trackData)}</p>
       </article>
+      <Image 
+        priority
+        src={(trackData.artwork_url !== null) ? 
+          (trackData.artwork_url) : (trackData.user.avatar_url)}
+        alt={trackData.title}
+        height={300}
+        width={300}
+      />
     </Layout>
   )
 }

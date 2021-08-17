@@ -1,0 +1,21 @@
+.trackInfo {
+  display: list-item;
+  height: 12px;
+  padding: 12px;
+  margin: 14px;
+  background: #efefef;
+}
+
+.trackInfo > span {
+  display: inline-block;
+  margin-right: 1%;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+

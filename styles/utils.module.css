@@ -1,52 +1,143 @@
-.heading2Xl {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
-}
-
-.headingXl {
-  font-size: 2rem;
-  line-height: 1.3;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
-}
-
-.headingLg {
-  font-size: 1.5rem;
-  line-height: 1.4;
-  margin: 1rem 0;
-}
-
-.headingMd {
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
-.borderCircle {
-  border-radius: 9999px;
-}
-
-.colorInherit {
-  color: inherit;
-}
-
-.padding1px {
-  padding-top: 1px;
-}
-
-.list {
+.tracklist {
+  position: relative;
   list-style: none;
+
+  background: radial-gradient(#a7c7e7 14%,#fff 0);
+  background-size: 20px 20px;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
 }
 
-.listItem {
-  margin: 0 0 1.25rem;
+.tracklist ul {
+  list-style: none;
+  min-width: 300px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 50px;
 }
 
-.lightText {
-  color: #666;
+.tracklist h2 {
+  color: #000;
+  font-size: 3em;
+  text-align: center;
+}
+
+.tracklist h2:after {
+  content: "";
+  height: 2px;
+  width: 80%;
+
+  max-width: 800px;
+
+  margin: 0 auto;
+  display: block;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.end {
+  position:relative;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  
+  height: 100%;
+  padding: 0;
+
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 1s ease-in-out 0s 1;
+
+  pointer-events: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.name {
+  font-size: 5em;
+}
+
+.character {
+  background: url(http://nekopara.com/img/character/cho/pc/character_b.png) no-repeat;
+
+  background-size: cover;
+  background-position: 40% 0;
+  width: 100%;
+  display: block;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: fixed;
+
+  animation: floating 5s infinite alternate;
+  filter: drop-shadow(8px 8px 0 #fff);
+
+  pointer-events: none;
+}
+
+@keyframes floating {
+  0% {
+    transform-origin: center;
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(10px)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+.waves {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.wave1 {
+  height: 200px;
+  display: block !important;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.wave2 {
+  height: 100px;
+  padding-top: 30px;
+  display: block !important;
+  position: relative;
+}
+
+.particles {
+  background-color: #fff;
+  position: relative;
 }

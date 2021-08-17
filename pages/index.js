@@ -12,52 +12,51 @@ import { sortTracks, getTracks } from '../lib/tracks'
 // Components
 import Layout, { siteTitle } from '../components/layout'
 import Background from '../components/background'
+import ListElement from '../components/list_element'
+import Waves from '../components/waves'
+import Particles from '../components/particles'
 
-
+// Parallax Scrolling For Components
+import { Parallax } from 'react-scroll-parallax';
 
 // Obtain Static Props 
 export async function getStaticProps() {
   const tracksData = await getTracks()
-  const sortedTracks = sortTracks(tracksData)
   return {
     props: {
-      sortedTracks
+      tracksData
     }
   }
 }
 
-const Home = ({ sortedTracks }) => {
+const Home = ({ tracksData }) => {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <Background>
-        <p style={{ position: "absolute"}}>
-          I'm cool
-        </p>
+        <div className={utilStyles.character}></div>
+        <div className={utilStyles.main}>
+          <h1 className={utilStyles.name}>AZUIR</h1>
+          <p>logo here</p>
+        </div>
       </Background>
-      <ul className={utilStyles.list}>
-        {sortedTracks.map(({ id, title, artwork_url, user, playback_count, likes_count }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/tracks/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <Image
-                priority
-                src={user.avatar_url}
-                className={utilStyles.borderCircle}
-                height={144}
-                width={144}
-              />
-              <p>{playback_count} ▷ {likes_count} ♡ {user.avatar_url}</p>
-            </li>
-          ))}
-      </ul>
+      <Waves />
+      <Particles />
+      <Parallax y={[0, -300]}>
+        <div className={utilStyles.tracklist}>
+          <h2>Tracks</h2>
+          <ul>
+            {tracksData.map((trackData, index) => (
+              <ListElement key={trackData.id} trackData={trackData} index={index}/>
+            ))}
+          </ul>
+        </div>
+      </Parallax>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>About</h2>
+      <section className={`${utilStyles.end}`}>
+        <h2>About</h2>
       </section>
     </Layout>
   )

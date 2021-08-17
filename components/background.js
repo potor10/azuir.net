@@ -1,11 +1,16 @@
 import Scene from './scene'
 
+// Stylesheets
+import styles from './background.module.css'
+
 const Background = ({ children }) => {
   return (
     <>
-      <div style={{ position: "relative", width: 1000, height: 200 }}>
+      <div className={styles.container}>
+        <div className={styles.canvas}>
+          <Scene/>
+        </div>
         {children}
-        <Scene/>
       </div>
     </>
   )

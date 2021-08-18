@@ -6,6 +6,9 @@ import * as React from 'react'
 import { useFrame, Canvas } from '@react-three/fiber'
 import { Icosahedron, Tube, PerspectiveCamera, OrbitControls } from '@react-three/drei'
 
+// Canvas Resize on Webkit Browsers
+import { ResizeObserver }  from '@juggle/resize-observer';
+
 import * as THREE from 'three';
 
 const BobaStraw = ({ position }) => {
@@ -78,7 +81,7 @@ const Scene = () => {
   }, [])
 
   return (
-    <Canvas>
+    <Canvas resize={{ polyfill: ResizeObserver }}>
       <OrthoCamera />
       <ambientLight />
       <pointLight position={[10, 10, 10]} />

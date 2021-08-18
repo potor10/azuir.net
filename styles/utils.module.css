@@ -54,7 +54,7 @@
   margin: 0 auto;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   animation: fadeInUp 1s ease-in-out 0s 1;
@@ -78,13 +78,16 @@
 
 .name {
   font-size: 5em;
+  font-family: "megrim";
+  text-shadow: 1px 1px 2px pink;
+  filter: drop-shadow(8px 8px 0 #BED0FD);
 }
 
 .character {
-  background: url(/images/character_b.png) no-repeat;
+  background: url(/images/char.png) no-repeat;
 
   background-size: cover;
-  background-position: 40% 0;
+  background-position: 0% 0;
   width: 100%;
   display: block;
 
@@ -115,4 +118,3 @@
     transform: translateY(0)
   }
 }
-

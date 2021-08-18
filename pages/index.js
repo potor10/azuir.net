@@ -19,6 +19,9 @@ import Particles from '../components/particles'
 // Parallax Scrolling For Components
 import { Parallax } from 'react-scroll-parallax';
 
+// Import Images
+import logo from '../public/images/logo.png'
+
 // Obtain Static Props 
 export async function getStaticProps() {
   const tracksData = await getTracks()
@@ -36,10 +39,10 @@ const Home = ({ tracksData }) => {
         <title>{siteTitle}</title>
       </Head>
       <Background>
-        <div className={utilStyles.character}></div>
+        <div className={utilStyles.character} />
         <div className={utilStyles.main}>
-          <h1 className={utilStyles.name}>AZUIR</h1>
-          <p>logo here</p>
+          <Image src={logo} alt={'azuir logo'} width={"100px"} height={"100px"}/>
+          <h1 className={utilStyles.name}>ZUIR</h1>
         </div>
       </Background>
       <Waves />

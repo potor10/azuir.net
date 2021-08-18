@@ -19,6 +19,7 @@ const Layout = ({ children, home }) => {
           content="Personal Portfolio Website Azuir.net"
         />
         <meta name="og:title" content={siteTitle} />
+        <link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet" />
       </Head>
       
       <header className={styles.header}>

@@ -30,7 +30,7 @@ const Particles = () => {
               }
           },
           size: {
-              value: 7,
+              value: 20,
               random: true,
               anim: {
                   enable: true,

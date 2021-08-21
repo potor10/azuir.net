@@ -11,16 +11,15 @@ import { sortTracks, getTracks } from '../lib/tracks'
 
 // Components
 import Layout, { siteTitle } from '../components/layout'
-import Background from '../components/background'
+import Background from '../components/index_background'
 import ListElement from '../components/list_element'
-import Waves from '../components/waves'
 import Particles from '../components/particles'
 
 // Parallax Scrolling For Components
 import { Parallax } from 'react-scroll-parallax';
 
 // Import Images
-import logo from '../public/images/logo.png'
+import logo from '../public/images/logo100x100.png'
 
 // Obtain Static Props 
 export async function getStaticProps() {
@@ -45,9 +44,8 @@ const Home = ({ tracksData }) => {
           <h1 className={utilStyles.name}>ZUIR</h1>
         </div>
       </Background>
-      <Waves />
       <Particles />
-      <Parallax y={[0, -300]}>
+      <Parallax y={[0, 0]}>
         <div className={utilStyles.tracklist}>
           <h2>Tracks</h2>
           <ul>

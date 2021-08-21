@@ -1,4 +1,8 @@
 {
+  "body" : {
+    "default_background_color" : "#ffe6f7",
+    "default_color" : "#ffffff"
+  },
 
   "track" : {
     "old_size" : "large",

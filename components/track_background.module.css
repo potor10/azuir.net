@@ -1,0 +1,36 @@
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-justify: none;
+  white-space:nowrap;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.scroller {
+  font-family: 'megrim', monospace;
+  font-size: 200px;
+  text-align: center;
+  letter-spacing: 30vw;
+  animation: playing linear 30s infinite;
+  position: absolute;
+}
+
+@keyframes playing {
+  0% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+  
+  100% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+}

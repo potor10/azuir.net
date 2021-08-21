@@ -9,7 +9,6 @@
   display: block !important;
   position: absolute;
   bottom: 0;
-  z-index: -1;
 }
 
 .wave2 {
@@ -17,4 +16,5 @@
   padding-top: 30px;
   display: block !important;
   position: relative;
+  z-index: 1;
 }

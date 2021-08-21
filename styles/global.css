@@ -33,8 +33,3 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
-body {
-  background-color: #ffe6f7;
-  color: white;
-}

@@ -1,8 +1,8 @@
 .trackContainer {
   display: flex;
-  position: absolute;
+  position: relative;
+  height: 100vh;
 
-  height: 100%;
   padding: 0;
 
   top: 0;
@@ -11,8 +11,6 @@
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-
-  animation: fadeInUp 1s ease-in-out 0s 1;
 }
 
 @keyframes fadeInUp {
@@ -55,36 +53,43 @@
 }
 
 .trackDetails {
-
-}
-
-.artistInfo {
-  font-size: 10px; 
-  color: #cccccc;
-  line-break: anywhere;
-  word-break: normal;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; 
-  font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-  font-weight: 100;
-}
-
-.artistLink {
-  color: #cccccc; 
-  text-decoration: none;
+  color: black;
 }
 
 .soundcloudBox {
   width: 500px;
 }
 
+.waveformContainer {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 100vw;
+  height: 40%;
+  max-height: 300px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 .waveform {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 20%;
+  width: auto;
+  height: 100%;
+  animation: playing linear 30s infinite;
+  top: 0;
 }
+
+@keyframes playing {
+  0% {
+    transform-origin: center;
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(-50%)
+  }
+}
+
 
 .tag {
   background-color: lightgray;

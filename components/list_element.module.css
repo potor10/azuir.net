@@ -4,6 +4,8 @@
   padding: 12px;
   margin: 14px;
   background: #efefef;
+
+  cursor: pointer;
 }
 
 .trackInfo > span {
